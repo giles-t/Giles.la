@@ -3,3 +3,4 @@ release*
 *.sublime-project
 *.sublime-workspace
 *.mp4
+*.DS_Store

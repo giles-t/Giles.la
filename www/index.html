@@ -9,69 +9,19 @@
   <link rel="stylesheet" type="text/css" href="build/giles.css">
 
 </head>
+
 <body ng-app="giles">
 
-	<div class="content" ng-controller="content">
-		<div class="content-header opacity-transition">
-			<h1>Giles Tamplin</h1>
-		</div>
-		<div class="row content-body">
-			<div class="col-sm-12 col-md-4">
-				<div class="main opacity-transition no-opacity" ng-class="{'no-opacity': noOpacity}">
-					<div class="main-header">
-						<h3>About</h3>
-					</div>
-					<div class="main-content">
-						<p>Hey! I'm Giles!</p>
-						<p>I'm a front-end engineer focused on building awesome in-browser experiences whether it's on desktop, tablet, or mobile.</p>
-						<p>I live and work in Los Angeles for the world's largest subscription televison provider - <a target="_blank" href="http://www.directv.com/">DirecTV</a>.</p>
-						<p>I'm a supporter of AngularJS, NodeJS, and virtually anything javascript. I spoke at Node Summit late last year about the process of implementing Node in an enterprise environment.</p>
-						<p>Connect with me on:</p>
-						<p class="social">
-							<a target="_blank" href="https://www.linkedin.com/pub/giles-tamplin/32/b47/b37">
-								<img src="img/linkedin.png" />
-							</a>
-							<a target="_blank" href="https://plus.google.com/+GilesTamplin/about">
-								<img src="img/gplus.png" />
-							</a>
-							<a target="_blank" href="https://twitter.com/gilestamplin">
-								<img src="img/twitter.png" />
-							</a>
-							<a target="_blank" href="http://instagram.com/theinstygrams">
-								<img src="img/instagram.png" />
-							</a>
-							<a target="_blank" href="https://www.facebook.com/giles.tamplin">
-								<img src="img/fb.png" />
-							</a>
-							<a target="_blank" href="https://foursquare.com/gilestamplin">
-								<img src="img/4sq.png" />
-							</a>
-							<a target="_blank" href="https://github.com/giles-t">
-								<img src="img/ghw.png" />
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-4">
-				<div class="main instagram opacity-transition" ng-mouseover="fade(true)" ng-mouseleave="fade()">
-					<div class="main-header">
-						<h3><a href="http://instagram.com/theinstygrams" target="_blank">Instagrams</a></h3>
-						<a target="_blank" href="http://instagram.com/theinstygrams">
-							<img src="img/instagram.png" />
-						</a>
-					</div>
-					<div class="main-content">
-						<div class="text-center" ng-repeat="i in instagrams">
-							<img ng-src="{{i.images.low_resolution.url}}"></img>
-							<p>{{i.caption.text}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12 col-md-4 twitter opacity-transition" ng-mouseover="fade(true)" ng-mouseleave="fade()">
-				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/gilestamplin" data-widget-id="447241079629176832">Tweets by @gilestamplin</a>
-			</div>
+	<div class="content">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <h1><a class="navbar-brand" href="#">Giles Tamplin</a></h1>
+		    </div>
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div class="row content-body" ng-view>
 		</div>
 	</div>
 
@@ -80,9 +30,8 @@
 	<div ng-video></div>
 
   <script src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular-route/angular-route.min.js"></script>
   <script src="build/giles.js"></script>
-
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </body>
 </html>

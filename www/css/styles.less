@@ -44,6 +44,17 @@ video, .backdrop, .content {
 	z-index: 1;
 }
 
+.navbar {
+	background: #333;
+	opacity: 0.8;
+	border: none;
+	border-radius: 0;
+	.navbar-brand {
+		font-family: sansation;
+		font-size: 24px;
+	}
+}
+
 .content {
 	position: absolute;
 	z-index: 2;
@@ -52,14 +63,6 @@ video, .backdrop, .content {
 .content-body {
 	margin: 0 2em;
 	> div {margin-bottom: 2em;}
-}
-
-.content-header {
-	width: 100%;
-	margin: 0 0 2em 0;
-	padding: 10px 20px;
-	background: #333;
-	opacity: 0.8;
 }
 
 .main {
@@ -82,6 +85,10 @@ video, .backdrop, .content {
 	padding: 12px;
 	line-height: 19px;
 	border-bottom: 1px solid #444;
+	h3 {
+		display: inline-block;
+		a {color: #cfcfcf;}
+	}
 }
 
 .main-content {
@@ -116,10 +123,6 @@ video, .backdrop, .content {
 	overflow: hidden;
 	.main-header {
 		position: relative;
-		h3 {
-			display: inline-block;
-			a {color: #cfcfcf;}
-		}
 		> a {
 			position: absolute;
 			right: 1em;
@@ -135,6 +138,14 @@ video, .backdrop, .content {
 			margin-top: 2em;
 			&:first-child {margin-top: 0;}
 		}
+	}
+}
+
+.portfolio {
+	margin-bottom: 30px;
+	.main-content {min-height: 260px;}
+	> .main {
+		opacity: 1;
 	}
 }
 
