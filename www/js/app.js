@@ -1,19 +1,8 @@
 
-angular.module('giles', ['ngRoute']);
-
-angular.module('giles').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-	$routeProvider
-		.when('/', {
-			templateUrl: 'home.html',
-			controller: 'content'
-		})
-		.when('/portfolio', {
-			templateUrl: 'portfolio.html',
-			controller: 'portfolio'
-		});
-}]);
-
-// API Values
-angular.module('giles').value('instagramApiURL', 'https://api.instagram.com/v1/');
-angular.module('giles').value('instagramClienId', '39e8f05d556240808c7e98e5926d1f7d');
-angular.module('giles').value('instagramUserId', '11782829');
+$( document ).ready(function() {
+  $('<img/>').attr('src', 'img/nyc.jpg').load(function() {
+     $(this).remove(); // prevent memory leaks as @benweet suggested
+     $('#background-image').css('background-image', 'url(img/nyc.jpg)');
+     $('#background-image').addClass('fadeIn');
+  });
+});

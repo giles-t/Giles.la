@@ -68,6 +68,7 @@ video, .backdrop, .content {
 .main {
 	max-width: 520px;
 	margin: auto;
+	margin-top: 40px;
 	padding: 0;
 	background: #333;
 	border-radius: 5px;
@@ -147,6 +148,24 @@ video, .backdrop, .content {
 	> .main {
 		opacity: 1;
 	}
+}
+
+#background-image {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: opacity 1s;
+}
+
+.fadeIn {
+	opacity: 1 !important;
 }
 
 video {display: none; visibility: hidden;}
